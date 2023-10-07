@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Message</title>
+</head>
+<body>
+    <h1>Repeat Message</h1>
+    <form action="/repeat" method="post">
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Repeat</button>
+    </form>
+    {{ if .Message }}
+        <h2>You said: {{ .Message }}</h2>
+    {{ end }}
+</body>
+</html>
